@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href=" {% static 'css/base.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/tshirlist.css' %}">
+    <meta charset="utf-8">
+    <meta name="theme-color" content="rgb(53, 53, 53)">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SG</title>
+</head>
+
+<body>
+    <div class="top_line">
+        <div id="mySidenav" class="sidenav">
+            <div class="x">
+                <a href="javascript:void(0)" class="button_x" onclick="closeNav()">&times;</a>
+            </div>
+            <div class="list_left_menu">
+                <div class="catalog">
+                    <a class="catalog_button" onclick="toggleCatalog()">⠀Каталог</a>
+                    <div class="list_catalog" id="listCatalog">
+                        <a href="#">Кепки</a><br>
+                        <a href="{% url 'tshirlist' %}">Футболки</a><br>
+                        <a href="#">Худи</a>
+                    </div>
+                </div>
+                <a href="#">⠀Контакты</a>
+                <a href="https://rutube.ru/video/059350efba7207a54b47b22d41396372/?playlist=361612">⠀Доставка</a>
+                <a href="#">⠀Мероприятия</a>
+            </div>
+        </div>
+
+
+        <a href="javascript:void(0)" onclick="openNav()" class="list_link"><img src="{% static '/img/list.png' %}" alt="list"></a>
+        <a href="{% url 'home' %}" class="logo"><img src="{% static '/img/logo.png' %}" alt="logo"></a>
+        <a href="https://htmlacademy.ru" class="list_link"><img src="{% static '/img/basket.png' %}" alt="basket"></a>
+    </div>
+    <div class="content">
+    {% block content %}
+
+    {% endblock %}
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "18%";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0%";
+        }
+
+        function toggleCatalog() {
+            var listCatalog = document.getElementById('listCatalog');
+            if (listCatalog.style.display === 'block') {
+                listCatalog.style.display = 'none';
+            } else {
+                listCatalog.style.display = 'block';
+            }
+        }
+    </script>
+    
+</body>
+</html>
