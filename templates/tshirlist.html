@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="">
+  <ul>
+    {% for tshirt in object_list %}
+    <div class="tshirt">
+      <li>{{ tshirt.Name }}</li>
+      <img src="{{ tshirt.Photo.url }}" alt="{{ tshirt.Name }}">
+      <li>{{ tshirt.Article }}</li>
+      <li>{{ tshirt.Size }}</li>
+      <li>{{ tshirt.Description }}</li>
+      <li>{{ tshirt.Price }}р.</li>
+    </div>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
