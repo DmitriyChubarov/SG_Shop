@@ -1,0 +1,84 @@
+.tshirt {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.tshirts {
+    display: flex;
+    height: auto;
+    width: 90vw;
+    height: 85vh;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tshirts_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.tshirts img {
+    width: 70%;
+}
+
+
+.tshirts_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.tshirts_description_name {
+    font-weight: bold;
+    font-size: 170%;
+}
+
+.tshirts_description_size {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+}
+
+.tshirts_description_size span {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.tshirts_description_size span:focus {
+    outline: 1px solid black;
+}
+
+.tshirts_description_size span:hover {
+    outline: 1px solid black;
+}
+
+.tshirts_description_button {
+    display: flex;
+    width: fit-content;
+    background-color: black;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.tshirts_description_button a {
+    text-decoration: none;
+    color: white;
+    font-family: 'LT Superior';
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+
+
+

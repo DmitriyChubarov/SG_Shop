@@ -2,18 +2,26 @@
 
 
 {% block content %}
-<div class="">
-  <ul>
+<div class="tshirt">
     {% for tshirt in object_list %}
-    <div class="tshirt">
-      <li>{{ tshirt.Name }}</li>
-      <img src="{{ tshirt.Photo.url }}" alt="{{ tshirt.Name }}">
-      <li>{{ tshirt.Article }}</li>
-      <li>{{ tshirt.Size }}</li>
-      <li>{{ tshirt.Description }}</li>
-      <li>{{ tshirt.Price }}р.</li>
+    <div class="tshirts">
+      <div class="tshirts_img">
+        <img src="{{ tshirt.Photo.url }}" alt="{{ tshirt.Name }}">
+      </div>  
+      <div class="tshirts_description">
+        <p class="tshirts_description_name">{{ tshirt.Name }}</p>
+        <h class="tshirts_description_article">Артикул: {{ tshirt.Article }}</h>
+        <p class="tshirts_description_price">Цена: {{ tshirt.Price }}р.</p>
+        <div class="tshirts_description_size"  tabindex="0">
+          <span tabindex="0">S</span>&nbsp;
+          <span tabindex="0">M</span>&nbsp;
+          <span tabindex="0">L</span>&nbsp;
+          <span tabindex="0">XL</span>&nbsp;
+        </div>
+        <p class="tshirts_description_description">{{ tshirt.Description }}</p>
+        <p class="tshirts_description_button"><a href="https://rutube.ru">Купить</a></p>
+      </div>
     </div>
     {% endfor %}
-  </ul>
 </div>
 {% endblock %}

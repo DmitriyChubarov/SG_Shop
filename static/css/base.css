@@ -6,11 +6,8 @@ html {
     height: 100%;
     width: 100%;
     color: white;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-
-body, div, h1, h2, h3, h4, h5, h6, p, a, span, ul, li {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-family: "COOLVETICA";
+    font-size: 120%;
 }
 
 body {
@@ -127,7 +124,7 @@ body {
 }
 
 .list_catalog a {
-    margin-left: 15%;
+    margin-left: 5%;
 }
 
 .catalog a:hover {
